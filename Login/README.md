@@ -4,11 +4,15 @@
 
 #### 1. 실습 영상
 
-![1차 필수과제](https://user-images.githubusercontent.com/62228195/96252438-f316fa80-0fec-11eb-8eeb-372cf68038c2.gif)   
+![1차 필수과제](https://user-images.githubusercontent.com/62228195/96252438-f316fa80-0fec-11eb-8eeb-372cf68038c2.gif)  
 
 
-#### 2. 코드 :    
-   
+
+</br>  
+</br>  
+
+#### 2. 코드
+
 
 #### * MainActivity.kt
 ![main](https://user-images.githubusercontent.com/62228195/96252265-a7fce780-0fec-11eb-9f0d-76e6ee393f55.PNG)
