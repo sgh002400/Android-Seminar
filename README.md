@@ -23,3 +23,18 @@
 
 
 
+##2주차
+
+### 필수 과제(11월12일 완료)
+
+#### ![2주차 필수과제](https://user-images.githubusercontent.com/62228195/98955736-956dc380-2542-11eb-9f10-8e3f9b5232ea.gif)
+
+#### 2. 코드
+
+class ProfileData (
+
+    val title : String,
+    val subTitle : String,
+    val date : String,
+    val detail : String
+)
