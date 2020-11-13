@@ -4,30 +4,63 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_sign_in.*
+import kotlin.properties.Delegates
 
 class SigninActivity : AppCompatActivity(){
-    private lateinit var profileAdapter:ProfileAdapter
+    private lateinit var viewPagerAdapter : SigninViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
-        profileAdapter = ProfileAdapter(this)
-        signin_rcv.adapter = profileAdapter
+        viewPagerAdapter = SigninViewPagerAdapter(supportFragmentManager) //이걸로 sample~에서 fm : 이걸 넘겨줌
+        viewPagerAdapter.fragments = listOf(
 
-        val lm = LinearLayoutManager(this)
-        signin_rcv.layoutManager = lm
-
-        profileAdapter.data = mutableListOf(
-            ProfileData("이름", "shin", "11월 12일", "23살"),
-            ProfileData("이름", "han", "11월 10일", "20살"),
-            ProfileData("이름", "nam", "11월 11일", "21살"),
-            ProfileData("이름", "kang", "11월 19일", "22살")
+            ProfileFragment(),
+            PortfolioFragment(),
+            SettingFragment()
         )
-        profileAdapter.notifyDataSetChanged()
+        sample_viewpager.adapter = viewPagerAdapter
+
+        //뷰페이저 슬라이드 했을 때 그에 대응되는 하단 탭 변경
+        sample_viewpager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {}
+
+            override fun onPageSelected(position: Int) {
+                sample_bottom_navi.menu.getItem(position).isChecked = true
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {}
+        })
+
+
+        // 하단 탭을 눌렀을 때 뷰페이저 화면 변경
+
+        sample_bottom_navi.setOnNavigationItemSelectedListener {
+            var index by Delegates.notNull<Int>()
+
+            when(it.itemId) {
+                R.id.menu_profile -> index = 0
+                R.id.menu_portfolio -> index = 1
+                R.id.menu_settings -> index = 2
+            }
+            sample_viewpager.currentItem = index
+            true
+        }
+
+
 
     }
+
+
+
+
 
 
 }
