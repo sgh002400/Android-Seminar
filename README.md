@@ -32,7 +32,6 @@
 #### 2. 코드
 
 #### * ProfileData.kt
-![image](https://user-images.githubusercontent.com/62228195/98956070-f5646a00-2542-11eb-849e-cfd31ad45a1b.png)
 
 #### * ProfileViewHolder.kt
 ![image](https://user-images.githubusercontent.com/62228195/98956124-03b28600-2543-11eb-89c6-262bf75b4ef3.png)
@@ -51,7 +50,7 @@
 ## 3주차
 
 ### 필수 과제(11월 14일 완료)
-![image](https://user-images.githubusercontent.com/62228195/99437213-811c3300-2955-11eb-95a3-29aa0ac55313.png)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/62228195/99437584-056eb600-2956-11eb-8db2-f528eabf615c.gif)
 
 
 #### 2. 코드
