@@ -51,6 +51,7 @@
 ## 3주차
 
 ### 필수 과제(11월 14일 완료)
+![image](https://user-images.githubusercontent.com/62228195/99437213-811c3300-2955-11eb-95a3-29aa0ac55313.png)
 
 
 #### 2. 코드
